@@ -134,12 +134,12 @@ class MovieViewSet(
             OpenApiParameter(
                 "actors",
                 type={"type": "array", "items": {"type": "number"}},
-                description="Filter by movie actors (?actors=Jack, Amanda)",
+                description="Filter by movie actors (?actors=1,2)",
             ),
             OpenApiParameter(
                 "genres",
                 type={"type": "array", "items": {"type": "number"}},
-                description="Filter by movie genres (?genres=horror, sci-fi)",
+                description="Filter by movie genres (?genres=1,2)",
             )
         ]
     )
@@ -191,7 +191,7 @@ class MovieSessionViewSet(viewsets.ModelViewSet):
             OpenApiParameter(
                 "movie",
                 type={"type": "number"},
-                description="Filter by movie id (?movie=1)",
+                description="Filter by movie ID (?movie=1)",
             ),
             OpenApiParameter(
                 "date",
